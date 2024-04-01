@@ -5,11 +5,8 @@ import momentDurationFormatSetup from 'moment-duration-format';
 
 momentDurationFormatSetup(moment);
 
-// Auth
-const apiKey = process.env.BYBIT_API_KEY ?? "key";
-const apiSecret = process.env.BYBIT_API_SECRET ?? "secret";
+// Bot settings
 
-// Params
 const symbol = "XRPUSDT";
 const quantity = "1";
 // only for Unified Trading Account, except used quoteCoin
@@ -18,9 +15,10 @@ const startTradingTime = "02.04.2024 07:59:55";
 const pingIntervalInSeconds = 60;
 const maxRetryCount = 50;
 
+
 const client = new RestClientV5({
-    key: apiKey,
-    secret: apiSecret,
+    key: process.env.BYBIT_API_KEY ?? "key",
+    secret: process.env.BYBIT_API_SECRET ?? "secret",
     testnet: false,
     parseAPIRateLimits: true,
     recv_window: 5000,
