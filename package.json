@@ -1,0 +1,14 @@
+{
+  "name": "bybit-bot",
+  "version": "1.0.0",
+  "scripts": {
+    "bot": "node main.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "bybit-api": "3.9.8",
+    "chalk": "^5.3.0",
+    "moment": "^2.30.1",
+    "moment-duration-format": "^2.3.2"
+  }
+}
